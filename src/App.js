@@ -39,14 +39,15 @@ export default function App() {
         setInput(e.target.value)}}
       />
       <button onClick={() => addItem(input)} className="add-button">Add</button>
-      <ul>
+      <div>
         {todos.map((todo) => (
-          <li key={todo.id}>
+          <div class="item" key={todo.id}>
+            <input type="checkbox"/>
             {todo.todo}
-            <button onClick={() => deleteTodo(todo.id)}>Remove</button>
-          </li>
+            <button class="remove-button" onClick={() => deleteTodo(todo.id)}>Remove</button>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

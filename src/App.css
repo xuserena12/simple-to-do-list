@@ -24,3 +24,13 @@
   padding-right: 5px;
   padding-left: 5px;
 }
+
+.item {
+  font-family: Helvetica;
+  font-size: 18px;
+}
+
+.remove-button {
+  border: 1px solid black;
+  border-radius: 3px;
+}
