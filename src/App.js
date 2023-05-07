@@ -12,6 +12,7 @@ export default function App() {
     const newTodo = {
       id: Math.random(),
       todo: todo,
+      complete: false,
     };
     // this creates an object which includes the id and the todo (which is essentially the todo that was passed in!!)
     // add the todo to the list
@@ -19,8 +20,6 @@ export default function App() {
 
     // clear the input box so that they know that it's been added, and so that they can add more things!!
     setInput("");
-    console.log("added");
-
   }
 
   function deleteTodo(id) {
@@ -51,4 +50,3 @@ export default function App() {
     </div>
   );
 }
-
