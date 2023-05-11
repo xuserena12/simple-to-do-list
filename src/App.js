@@ -31,14 +31,22 @@ export default function App() {
   return (
     <div>
       <h1 className="title">To Do List</h1>
+      <input class="search-bar" placeholder="search for item"></input>
       <input 
+      placeholder="add item"
       type="text"
       value={input}
       className="input-bar"
       onChange={(e) => {
         setInput(e.target.value)}}
       />
-      <button onClick={() => addItem(input)} className="add-button">Add</button>
+      <button onClick={() => {
+        if (input === "") {
+          alert('Please enter a valid item!')
+        } else {
+          addItem(input)
+        }
+      }} className="add-button">Add</button>
       <div>
         {todos.map((todo) => (
           <div class="item" key={todo.id}>
